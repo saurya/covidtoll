@@ -1,19 +1,41 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from '../views/Home.vue'
+import AddMemorialModal from '../views/AddMemorialModal.vue'
+import ViewMemorialModal from '../views/ViewMemorialModal.vue'
+import Explanation from '../views/Explanation.vue'
+import Feed from '../views/Feed.vue'
+import AddMemorialForm from '../views/AddMemorialForm.vue'
 
 const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
+
+    children: [
+        {
+          path: '/expl',
+          component: Explanation 
+        },
+        {
+          path: '/feed',
+          component: Feed
+        },
+        {
+          path: '/add',
+          component: AddMemorialForm
+        }
+      ]
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    path: '/add',
+    name: 'Add',
+    component: AddMemorialModal
+  },
+  {
+    path: '/view',
+    name: 'View',
+    component: ViewMemorialModal
   }
 ]
 
