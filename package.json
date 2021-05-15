@@ -16,6 +16,7 @@
     "core-js": "^3.6.5",
     "headlessui": "*",
     "heroicons": "^1.0.1",
+    "litepie-datepicker": "^1.0.14",
     "postcss": "^7",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2",
     "vue": "^3.0.0",

@@ -16,93 +16,103 @@
 -->
 <template>
   <form class="space-y-8 divide-y divide-gray-200">
-    <div class="space-y-8 divide-y divide-gray-200 sm:space-y-5">
+    <div class="space-y-8 divide-y divide-gray-200">
       <div>
-        <div>
-          <h3 class="text-lg leading-6 font-medium text-gray-900">
-            Profile
+        <div class="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
+         <div>
+          <h3 class="text-lg leading-7 font-medium text-gray-900">
+            Make a memorial for your loved one            
           </h3>
-          <p class="mt-1 max-w-2xl text-sm text-gray-500">
-            This information will be displayed publicly so be careful what you share.
-          </p>
-        </div>
-
-        <div class="mt-6 sm:mt-5 space-y-6 sm:space-y-5">
-
-          <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
-            <label for="about" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+         </div>
+         <div class="sm:col-span-6">
+            <label for="about" class="block text-sm font-medium text-gray-700">
               About
             </label>
-            <div class="mt-1 sm:mt-0 sm:col-span-2">
-              <textarea id="about" name="about" rows="3" class="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300 rounded-md" />
-              <p class="mt-2 text-sm text-gray-500">Write a few sentences about yourself.</p>
+            <div class="mt-1">
+              <textarea id="about" name="about" rows="3" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md" />
             </div>
+            <p class="mt-2 text-sm text-gray-500">Write a few sentences about yourself.</p>
           </div>
 
-          <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-center sm:border-t sm:border-gray-200 sm:pt-5">
+          <div class="sm:col-span-6">
             <label for="photo" class="block text-sm font-medium text-gray-700">
               Photo
             </label>
-            <div class="mt-1 sm:mt-0 sm:col-span-2">
-              <div class="flex items-center">
-                <span class="h-12 w-12 rounded-full overflow-hidden bg-gray-100">
-                  <svg class="h-full w-full text-gray-300" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
-                  </svg>
-                </span>
-                <button type="button" class="ml-5 bg-white py-2 px-3 border border-gray-300 rounded-md shadow-sm text-sm leading-4 font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                  Change
-                </button>
-              </div>
+            <div class="mt-1 flex items-center">
+              <span class="h-12 w-12 rounded-full overflow-hidden bg-gray-100">
+                <svg class="h-full w-full text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+              </span>
+              <button type="button" class="ml-5 bg-white py-2 px-3 border border-gray-300 rounded-md shadow-sm text-sm leading-4 font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                Change
+              </button>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="pt-8 space-y-6 sm:pt-10 sm:space-y-5">
-        <div>
-          <h3 class="text-lg leading-6 font-medium text-gray-900">
-            Make a memorial for your loved one
-          </h3>
-        </div>
-        <div class="space-y-6 sm:space-y-5">
-          <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
-            <label for="first_name" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+      <div class="pt-8">
+        <div class="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
+          <div class="sm:col-span-3">
+            <label for="first_name" class="block text-sm font-medium text-gray-700">
               First name
             </label>
-            <div class="mt-1 sm:mt-0 sm:col-span-2">
-              <input type="text" name="first_name" id="first_name" autocomplete="given-name" class="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md" />
+            <div class="mt-1">
+              <input type="text" name="first_name" id="first_name" autocomplete="given-name" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md" />
             </div>
           </div>
 
-          <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
-            <label for="last_name" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+          <div class="sm:col-span-3">
+            <label for="last_name" class="block text-sm font-medium text-gray-700">
               Last name
             </label>
-            <div class="mt-1 sm:mt-0 sm:col-span-2">
-              <input type="text" name="last_name" id="last_name" autocomplete="family-name" class="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md" />
+            <div class="mt-1">
+              <input type="text" name="last_name" id="last_name" autocomplete="family-name" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md" />
             </div>
           </div>
 
-          <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
-            <label for="email" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+<div class="sm:col-span-6">
+            <label for="last_name" class="block text-sm font-medium text-gray-700">
+              Lifetime  
+            </label>
+            <div class="mt-1">
+              <litepie-datepicker
+      v-model="birthDate"
+    ></litepie-datepicker>
+            </div>
+            <label for="last_name" class="block text-sm font-medium text-gray-700">
+              Lifetime
+            </label>
+            <div class="mt-1">
+             <litepie-datepicker
+      v-model="passingDate"
+    ></litepie-datepicker>
+            </div>
+
+
+          </div>
+
+          <div class="sm:col-span-4">
+            <label for="email" class="block text-sm font-medium text-gray-700">
               Email address
             </label>
-            <div class="mt-1 sm:mt-0 sm:col-span-2">
-              <input id="email" name="email" type="email" autocomplete="email" class="block max-w-lg w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300 rounded-md" />
+            <div class="mt-1">
+              <input id="email" name="email" type="email" autocomplete="email" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md" />
             </div>
           </div>
 
-          <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
-            <label for="country" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+          <div class="sm:col-span-3">
+            <label for="region" class="block text-sm font-medium text-gray-700">
               Region
             </label>
-            <div class="mt-1 sm:mt-0 sm:col-span-2">
-              <select id="country" name="country" autocomplete="country" class="max-w-lg block focus:ring-indigo-500 focus:border-indigo-500 w-full shadow-sm sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
+            <div class="mt-1">
+              <select id="region" name="region" autocomplete="region" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
                 <option>Ghorakhpur</option>
               </select>
             </div>
           </div>
+
         </div>
       </div>
     </div>
