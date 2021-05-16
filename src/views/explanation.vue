@@ -7,10 +7,18 @@
         <span class="block">The Toll is a small attempt to give people their outlet to remember their most important people who left us because of COVID-19.</span>
       </h2>
       <p class="mt-4 text-lg leading-6 text-indigo-200"></p>
-      <a href="#" class="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50 sm:w-auto">
+      <a id="addmemorialbutton" @click="scrollToForm" class="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50 sm:w-auto">
         MAKE A MEMORIAL
       </a>
     </div>
   </div>
 </template>
 
+export default {
+  el: "#addmemorialbutton",
+  methods: {
+    scrollToForm() {
+      document.getElementById('addmemorialform').scrollIntoView({behavior:'smooth'});
+    }
+  }
+}
